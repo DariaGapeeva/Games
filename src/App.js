@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Navbar from "./Components/Navbar";
+import FiguresPage from "./Components/FiguresPages/FiguresPage";
+import PuzzlesPage from "./Components/PuzzlesPage/PuzzlesPage";
+import RainbowPage from "./Components/RainbowPage/RainbowPage";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { RainbowState } from "./Context/rainbow/rainbowState";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RainbowState>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <Switch>
+          <Route path={"/"} exact component={PuzzlesPage} />
+          <Route path={"/figures"} component={FiguresPage} />
+          <Route path={"/rainbow"} component={RainbowPage} />
+        </Switch>
+      </BrowserRouter>
+    </RainbowState>
   );
 }
 
