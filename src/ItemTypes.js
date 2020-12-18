@@ -11,3 +11,6 @@ export const ItemTypes = {
 export const PuzzlesTypes = {
   TYPE: "type",
 };
+export const FifteenTypes = {
+  FIFTEEN: "fifteen",
+};

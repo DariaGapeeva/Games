@@ -25,6 +25,11 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/fifteen" exact>
+                Game of Fifteen
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/figures">
                 Figures
               </NavLink>

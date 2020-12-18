@@ -18,6 +18,7 @@ import starPic from "../../img/star.png";
 import starBorder from "../../img/starborder.png";
 
 import wood from "../../img/wood.png";
+import Button from "./../Button";
 
 const BorderContainer = styled.div`
   margin: 220px auto 0;
@@ -149,11 +150,7 @@ const FiguresPages = () => {
           />
         ))}
       </BorderContainer>
-      <div className="mt-4 text-center">
-        <button className="btn btn-success " onClick={onStart}>
-          Start
-        </button>
-      </div>
+      <Button message={"Start"} onMix={onStart} />
     </div>
   );
 };

@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { Droppable, DragDropContext } from "react-beautiful-dnd";
 import { RainbowContext } from "../../Context/rainbow/rainbowContext";
 import Tape from "./Tape";
+import Button from "../Button";
 
 const Rainbow = styled.div`
   background: #343a40;
   padding: 50px;
-  width: 100%px;
-  margin: 0 auto;
+  width: 100%;
 `;
 
 const RainbowPage = () => {
@@ -63,11 +63,7 @@ const RainbowPage = () => {
         </Droppable>
       </DragDropContext>
 
-      <div className="mt-4 text-center">
-        <button className="btn btn-success " onClick={onMix}>
-          Mix
-        </button>
-      </div>
+      <Button message={"Mix"} onMix={onMix} />
     </div>
   );
 };

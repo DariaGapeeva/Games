@@ -20,12 +20,6 @@ const FigureStylded = styled.div`
 const Figure = ({ left, top, type, figure }) => {
   const [{ isDragging }, drag] = useDrag({
     item: { type: type },
-    // end: (item, monitor) => {
-    //   const dropResult = monitor.getDropResult();
-    //   if (item && dropResult) {
-    //     alert(`You dropped success!`);
-    //   }
-    // },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),

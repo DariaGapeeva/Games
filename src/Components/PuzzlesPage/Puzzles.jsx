@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { PuzzlesTypes } from "../../ItemTypes";
 import Square from "./Square";
 import Puzzle from "./Puzzle";
+import Button from "../Button";
 
 import Pic1 from "../../img/puzzles/cat/cat1.png";
 import Pic2 from "../../img/puzzles/cat/cat2.png";
@@ -13,6 +14,7 @@ import Pic6 from "../../img/puzzles/cat/cat6.png";
 import Pic7 from "../../img/puzzles/cat/cat7.png";
 import Pic8 from "../../img/puzzles/cat/cat8.png";
 import Pic9 from "../../img/puzzles/cat/cat9.png";
+import { calculate } from "./../../commonFunctions";
 
 const Container = styled.div`
   display: flex;
@@ -53,12 +55,6 @@ const ContainerPuzzlesRight = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-
-const calculate = (array1, array2) => {
-  array1.sort(() => Math.random() - 0.5);
-  let newArray = array2.map((item, index) => ({ ...item, pic: array1[index] }));
-  return newArray;
-};
 
 const Puzzles = () => {
   const pictures = [Pic1, Pic2, Pic3, Pic4, Pic5, Pic6, Pic7, Pic8, Pic9];
@@ -238,11 +234,7 @@ const Puzzles = () => {
           </ContainerPuzzlesRight>
         </ContainerRight>
       </Container>
-      <div className="mt-4 text-center">
-        <button className="btn btn-success" onClick={onMix}>
-          Mix
-        </button>
-      </div>
+      <Button message={"Mix"} onMix={onMix} />
     </div>
   );
 };

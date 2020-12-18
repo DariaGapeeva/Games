@@ -19,7 +19,7 @@ const SquareStyled = styled.div`
 
 const Square = ({ type, pic, top, right, id }) => {
   const [{ isDragging }, drag] = useDrag({
-    item: { type: type, id: id },
+    item: { type: type, id },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
