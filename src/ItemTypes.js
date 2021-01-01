@@ -14,3 +14,7 @@ export const PuzzlesTypes = {
 export const FifteenTypes = {
   FIFTEEN: "fifteen",
 };
+
+export const WatchTypes = {
+  WATCH_NUMBER: "watchNumber",
+};

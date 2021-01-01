@@ -7,6 +7,7 @@ import RainbowPage from "./Components/RainbowPage/RainbowPage";
 import { HashRouter, Switch, Route, BrowserRouter } from "react-router-dom";
 import { RainbowState } from "./Context/rainbow/rainbowState";
 import GameOfFifteenPage from "./Components/GameOfFifteen/GameOfFifteenPage";
+import WatchPage from "./Components/WatchPage/WatchPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path={"/figures"} component={FiguresPage} />
           <Route path={"/rainbow"} component={RainbowPage} />
           <Route path={"/fifteen"} component={GameOfFifteenPage} />
+          <Route path={"/watch"} component={WatchPage} />
         </Switch>
         {/* </BrowserRouter> */}
       </HashRouter>

@@ -39,6 +39,11 @@ const Navbar = () => {
                 Rainbow
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/watch">
+                Watch
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
